@@ -1,0 +1,18 @@
+include ../templates/header.pug
+article.container
+  h1.text-center Envie-nos uma mensagem!
+  form#contact-form
+    .form-group
+      label Seu Nome
+      input.form-control(placeholder='Seu nome...')
+    .form-group
+      label Assunto
+      input.form-control(placeholder='Assunto...')
+    .form-group
+      label Mensagem
+      textarea.form-control
+    .form-group
+      button.btn-default.form-control#send-contact Enviar
+
+
+include ../templates/footer.pug

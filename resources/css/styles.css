@@ -1,0 +1,126 @@
+body {
+  font-family: 'Oswald', sans-serif !important; 
+}
+
+/* Home */
+.home
+{
+  font-family: 'Oswald', sans-serif;
+  margin-left:20px;
+}
+
+.home.title {
+  font-size:500%;
+}
+
+.home.description {
+
+  margin-top:4%;
+  color:rgb(70,70,70);
+
+}
+
+.home.description p {
+  margin:0;
+}
+
+#changing {
+  text-decoration:none;
+
+}
+
+.navbar-default {
+  background-color:white;
+  border-color:white;
+  margin-top:20px;
+  margin-left:20px;
+}
+
+.opcoes li a {
+
+  color:rgb(70,70,70) !important;
+  font-size:120%;
+  font-family: 'Oswald', sans-serif;
+}
+.navbar-brand {
+  font-size:250%;
+  color:black !important;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Portfolio */
+#job1 {
+  background-image: url('/img/job1.jpg')
+}
+#job2 {
+  background-image: url('/img/job2.jpg')
+}
+
+#job3 {
+  background-image: url('/img/job3.jpg')
+}
+
+.job {
+  background-size:cover;
+  height:400px;
+}
+.job h2 {
+  font-size:42px;
+}
+
+
+
+/* Contato */
+#contact-form textarea {
+  height:400px;
+  font-size:26px;
+}
+#send-contact {
+  color:white;
+  background-color:black;
+  font-size:28px;
+  height:75px;
+}
+
+  /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
+    
+    .home.description {
+      font-size:500%;
+    }
+
+    #navbar {
+      margin-left:130px;
+      position:relative;
+    }
+
+    .opcoes li a {
+      border-bottom:1px solid black;
+    }
+  }
+
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+ .home.description {
+      font-size:1000%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
