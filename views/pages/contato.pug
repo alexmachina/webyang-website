@@ -1,18 +1,24 @@
 include ../templates/header.pug
 article.container
   h1.text-center Envie-nos uma mensagem!
-  form#contact-form
+  form#contact-form(data-toggle='validator' role='form' method='POST' action='/contato')
     .form-group
-      label Seu Nome
-      input.form-control(placeholder='Seu nome...')
+      label(for='nome') Seu Nome
+      input.form-control#nome(placeholder='Seu nome...' name='nome' required)
     .form-group
       label Assunto
-      input.form-control(placeholder='Assunto...')
+      input.form-control#assunto(placeholder='Assunto...', name='assunto' required)
+    .form-group
+      label Email
+      input.form-control#email(type="email" required placeholder='Seu Email...', name='email')
+    .form-group
+      label Telefone
+      input.form-control#telefone(placeholder='Telefone para contato' name='telefone' required)
     .form-group
       label Mensagem
-      textarea.form-control
+      textarea.form-control#mensagem(name='mensagem' required)
     .form-group
-      button.btn-default.form-control#send-contact Enviar
+      button.btn-default.form-control#send-contact(type='submit') Enviar
 
 
 include ../templates/footer.pug

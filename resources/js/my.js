@@ -21,10 +21,33 @@
 
 
     }
-
-
    fnChange() 
-    //Runs for the first time.
-    //Sets the interval.
-  
+
+
+  $('#contact-form').validator().on('submit',(e) => {
+
+    if (e.isDefaultPrevented()) {
+
+
+    } else {
+      e.preventDefault()
+      $('#send-contact').attr('disabled','disabled')
+      $("#send-contact").text("Enviando...")
+      $.post('/contato',
+        {
+          'nome' : $('#nome').text(),
+          'assunto' : $('#assunto').text(),
+          'mensagem' : $('#mensagem').text()
+        }).done((data) => {
+         BootstrapDialog.alert('OK. Entraremos em contato em breve.')
+            
+          
+          $("#send-contact").text("Obrigado!")
+        }).fail((err) => {
+          BootstrapDialog.alert("Erro ao enviar mensagem :(")
+        })
+    }
+  })
+
+
 }())
