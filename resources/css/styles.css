@@ -13,12 +13,7 @@ body {
   font-size:500%;
 }
 
-.home.description {
 
-  margin-top:4%;
-  color:rgb(45,45,45);
-
-}
 
 .home.description p {
   margin:0;
@@ -127,15 +122,19 @@ body {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
-
+ #logo-index{
+    margin-left:100px;
+  }
 
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
   .home.description {
-    font-size:1000%;
   }
+
+ 
+ 
 }
 
 /* Medium Devices, Desktops */
@@ -145,10 +144,32 @@ body {
   }
 
 }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1024px) {
+  .home.description {
+    font-size:92px;
+  }
+  #logo-index {
+    height:500px;
+    margin-left:0;
+  }
+  
+
+}
+
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+@media only screen and (min-width : 1400px) {
+  .home.description {
+    font-size:1000%;
+    margin-top:4%;
+    color:rgb(45,45,45);
+  }
 
+  #logo-index: {
+    width:100px;
+
+  }
 }
 
 
