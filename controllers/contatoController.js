@@ -38,8 +38,6 @@ class ContatoController {
     }
 
   }
-
-
 }
 
 module.exports = new ContatoController()

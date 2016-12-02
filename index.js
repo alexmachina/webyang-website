@@ -1,7 +1,8 @@
 let express = require('express'),
     bodyParser = require('body-parser'),
     app = express(),
-    port = 8080,
+    port = process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip = process.env.OPENSHIFT_NODEJS_IP || 'localhost',
     contatoController = require('./controllers/contatoController')
 
 app.use(express.static('resources'))
@@ -23,10 +24,7 @@ app.get('/contato', (req, res) => {
 
 app.post('/contato', contatoController.sendMail)
 
-  
-
-
-app.listen(8080, (err) => {
+app.listen(port, ip, (err) => {
   if (err) console.log(err)
   else console.log(`Server up! ${port}`)
 })
