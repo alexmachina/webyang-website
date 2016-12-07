@@ -7,7 +7,7 @@ class ContatoController {
 
     this.smtpConfig = {
       host: this.config.smtp,
-      port: 587,
+      port: this.config.port,
       secure: false,
       auth: {
         user:this.config.user,
@@ -27,7 +27,7 @@ class ContatoController {
 
       let transporter = nodemailer.createTransport(this.smtpConfig)
       transporter.sendMail(mailOptions, (err, info) => {
-        if (err){ 
+        if (err){
 
           console.log(err)
           res.json(err)
